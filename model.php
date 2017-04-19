@@ -1,23 +1,32 @@
 <?php
 
-class model{
+require("connect.php");
 
-    public $modelDescription;
-    private $destination;
-    private $username;
+class Destination{
 
     /**
      * model constructor.
+     * @param $destination
+     * @param $user
      */
-    public function __construct(){
-        $this->modelDescription = "This is the model class";
+    public function __construct($destination, $user)
+    {
+        $this->modelDescription = "Destination model";
         $this->destination = $destination;
-        $this->username = $username;
+        $this->user = $user;
+        $this->databaseAction = new DatabaseControl();
 
-        public function save(){
-            $sql = "INSERT INTO Destinations (username, destination) VALUES ('" . $this->username . "'," . $this->destination"')";
+    }
 
+    public function saveDestination()
+    {
 
-        }
+        $sql = "INSERT INTO Destinations (User, Destination) VALUES (" . $this->user . "," . $this->destination . ")";
+        $this->databaseAction->query($sql);
+
+        echo "Destination " . $this->destination . " saved successfully!";
+
     }
 }
+
+

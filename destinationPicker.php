@@ -1,11 +1,14 @@
 <?php
 
-include 'model.php';
-include 'contoller.php';
-include 'view.php';
+include("model.php");
+include ("controller.php");
+include ("view.php");
 
-$model = new Model();
-$controller = new Controller($model);
-$view = new View($controller, $model);
+$user = 1;
+$destination = "Edinburgh";
+
+$destinationObject = new Destination($destination, $user);
+$controller = new Controller($destinationObject);
+$view = new View($controller, $destinationObject);
 echo $view->output();
 
