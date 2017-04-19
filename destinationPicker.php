@@ -5,10 +5,10 @@ include ("controller.php");
 include ("view.php");
 
 $user = 1;
-$destination = "Edinburgh";
+$destination = $_GET["destination"];
 
-$destinationObject = new Destination($destination, $user);
-$controller = new Controller($destinationObject);
+$destinationObject = new NewDestinationController($destination, $user);
+$destinationObject->saveDestination();
 $view = new View($controller, $destinationObject);
 echo $view->output();
 

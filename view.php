@@ -19,7 +19,7 @@ class view{
      * @return string
      */
     public function output(){
-        return "<p>" . $this->model->string . "</p>"
+        return "<p>" . $this->model->string . "</p>";
 
     }
 }

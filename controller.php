@@ -1,14 +1,23 @@
 <?php
 
-class controller {
+require("model.php");
 
-    private $model;
+class NewDestinationController {
+
 
     /**
      * controller constructor.
      */
-    public function __construct()
+    public function __construct($destination, $user)
     {
-        $this->model = $model;
+        $this->destination = $destination;
+        $this->user = $user;
+    }
+
+
+    public function saveDestination(){
+        $destinationObject = new Destination($this->destination, $this->user);
+        $destinationObject->saveDestination();
+
     }
 }
