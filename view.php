@@ -1,17 +1,16 @@
 <?php
 
-class view{
-    private $model;
-    private $controller;
+class destinationView{
+
 
     /**
      * view constructor.
      * @param $controller
      * @param $model
      */
-    public function __construct($controller, $model){
-        $this->controller = $controller;
-        $this->model = $model;
+    public function __construct($model){
+
+        $this->Destination = $model;
 
     }
 
@@ -19,7 +18,9 @@ class view{
      * @return string
      */
     public function output(){
-        return "<p>" . $this->model->string . "</p>";
+
+        $destination = $this->Destination->$destination;
+        return "You have successfully added " . $destination;
 
     }
 }

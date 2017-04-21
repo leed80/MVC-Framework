@@ -18,13 +18,21 @@ class Destination{
 
     }
 
-    public function saveDestination()
+
+    public function save()
     {
 
         $sql = "INSERT INTO Destinations (User, Destination) VALUES (" . $this->user . "," . $this->destination . ")";
         $this->databaseAction->query($sql);
 
         echo "Destination " . $this->destination . " saved successfully!";
+
+    }
+
+
+
+    public function get(){
+        //retreive destinations from the database
 
     }
 }
