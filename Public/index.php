@@ -1,5 +1,11 @@
 <html>
 
+<?php
+
+echo 'Requested URL = "' . $_SERVER['QUERY_STRING'] . '"';
+
+?>
+
 <h1>Destination Selector</h1>
 
 
