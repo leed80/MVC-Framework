@@ -35,6 +35,7 @@ class Destination{
         //retreive destinations from the database
 
     }
+
 }
 
 
